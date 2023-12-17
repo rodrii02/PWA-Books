@@ -45,7 +45,7 @@ export const Buscador = () => {
   return (
     <div className='buscador-libros'>
       <div className='buscador'>
-        <h3>Introduce el nombre del libro: </h3>
+        <h1>Introduce el nombre del libro: </h1>
         <input type='text' placeholder='Escribe el titulo de un libro' value={inputText} onChange={(e) => setInputText(e.target.value)}></input>
         <button onClick={ e => buscarLibros()}> Buscar</button>
       </div>

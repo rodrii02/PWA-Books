@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Buscador de libros</h1>
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" alt="logo" height= "90" width="90"/>
       </header>
       <main className='App-main'>
         <Buscador></Buscador>

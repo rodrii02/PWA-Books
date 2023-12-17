@@ -3,7 +3,6 @@
 }
 
 .App-logo {
-  height: 10vmin;
   pointer-events: none;
 }
 
@@ -55,10 +54,10 @@
       margin: 5px;
       padding: 5px;
     }
-      .libro img{
+      /* .libro img{
         width: 150px;
         height: 200px;
-      }
+      } */
       ul{
         padding: 0;
       }
@@ -71,7 +70,12 @@
         padding: 10px;
       }
 
-      .infoLibro h3{
+      .buscador h1{
+        font-size: medium;
+        color: white;
+      }
+
+      h3{
         color: white;
       }
       .infoLibro a{
