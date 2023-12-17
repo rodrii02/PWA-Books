@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -15,14 +15,69 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 10vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(2vmin);
   color: white;
 }
+
+.App-main{
+  background-color: #282c34;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+}
+  .buscador-libros{
+    height: max-content;
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+    .buscador{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .libro{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border: 1px solid white;
+      border-radius: 6px;
+      margin: 5px;
+      padding: 5px;
+    }
+      .libro img{
+        width: 150px;
+        height: 200px;
+      }
+      ul{
+        padding: 0;
+      }
+      li {
+        list-style-type: none; /* Esto quita los marcadores de lista de los elementos <li> */
+      }
+
+      .infoLibro{
+        text-align: left;
+        padding: 10px;
+      }
+
+      .infoLibro h3{
+        color: white;
+      }
+      .infoLibro a{
+        text-decoration: underline;
+        color: white;
+      }
 
 .App-link {
   color: #61dafb;
