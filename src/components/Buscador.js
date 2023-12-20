@@ -2,11 +2,12 @@ import React, {useState} from 'react';
 import logo from '../logo.svg';
 import { Libro } from './Libro';
 import axios from 'axios';
+import {useLocalStorage} from './useLocalStorage'
 
 export const Buscador = () => {
 
-  const [libros, setLibros] = useState([]);
-  const [inputText, setInputText] = useState(''); // Nuevo estado para el texto del input
+  const [libros, setLibros] = useLocalStorage('libros', []);
+  const [inputText, setInputText] = useLocalStorage('tituloLibro', ''); // Nuevo estado para el texto del input
 
   const buscarLibros = async() => {
     const nLibros = []
@@ -22,7 +23,6 @@ export const Buscador = () => {
 
       if(respuesta.status === 200){ //si hay respuesta
         respuesta.data.items.forEach((libro) => {
-          const urlImg = ""
           const nuevoLibro = (
             <Libro
               urlImg={libro.volumeInfo.readingModes.image ? libro.volumeInfo.imageLinks.smallThumbnail: logo}
@@ -31,11 +31,9 @@ export const Buscador = () => {
               linkMasInfo={libro.volumeInfo.infoLink}
             />
           );
-          console.log(urlImg)
           nLibros.push(nuevoLibro);
         });
       }
-      
     } catch (error) {
       console.log(error)
     }
