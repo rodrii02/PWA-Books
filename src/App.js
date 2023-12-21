@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import icon from './img/book-icon.png';
 import './App.css';
 import { Buscador } from './components/Buscador.js';

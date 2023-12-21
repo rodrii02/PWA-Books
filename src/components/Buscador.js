@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import logo from '../logo.svg';
 import { Libro } from './Libro';
 import axios from 'axios';
@@ -10,6 +10,13 @@ export const Buscador = () => {
   const [inputText, setInputText] = useLocalStorage('tituloLibro', ''); // Nuevo estado para el texto del input
 
   const buscarLibros = async() => {
+
+    if (inputText.trim() === '') {
+      // Mostrar un mensaje de alerta si el campo está vacío
+      window.alert('Por favor, ingresa el título de un libro antes de buscar.');
+      return; // Salir de la función si el campo está vacío
+    }
+
     const nLibros = []
     try {
       const respuesta = await axios.get("https://www.googleapis.com/books/v1/volumes?", {
