@@ -2,13 +2,20 @@
 
 let cacheData = "appV1";
 
+// Agrega los recursos que deseas cachear aquí
+        // Por ejemplo:
+        // ... Agrega otros recursos que necesites cachear
 this.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(cacheData).then((cache) => {
       cache.addAll([
-        // Agrega los recursos que deseas cachear aquí
-        // Por ejemplo:
-        // ... Agrega otros recursos que necesites cachear
+        // '/',
+        // '/PWA-Books',
+        // '/index.html',
+        // '/PWA-Books/static/js/bundle.js',
+        // '/PWA-Books/manifest.json',
+        // '/PWA-Books/logo192.png',
+        // '/PWA-Books/favicon.ico'
       ]);
     })
   );
